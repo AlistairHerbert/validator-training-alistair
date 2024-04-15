@@ -3,11 +3,11 @@ import pandas as pd
 
 def read_cin_data():
     ChildCharacteristics = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/ChildCharacteristics.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/ChildCharacteristics.csv"
     )
 
     ChildIdentifiers = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/ChildIdentifiers.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/ChildIdentifiers.csv"
     )
     ChildIdentifiers["PersonBirthDate"] = pd.to_datetime(
         ChildIdentifiers["PersonBirthDate"], format="%d/%m/%Y", errors="coerce"
@@ -20,11 +20,11 @@ def read_cin_data():
     )
 
     ChildProtectionPlans = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/ChildProtectionPlans.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/ChildProtectionPlans.csv"
     )
 
     CINdetails = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/CINdetails.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/CINdetails.csv"
     )
     CINdetails["CINreferralDate"] = pd.to_datetime(
         CINdetails["CINreferralDate"], format="%d/%m/%Y", errors="coerce"
@@ -37,16 +37,16 @@ def read_cin_data():
     )
 
     CINplanDates = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/CINplanDates.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/CINplanDates.csv"
     )
-    Header = pd.read_csv("/workspaces/validator-training/fake_cin_data/Header.csv")
+    Header = pd.read_csv("/workspaces/validator-training-alistair/fake_cin_data/Header.csv")
     Header["ReferenceDate"] = pd.to_datetime(
         Header["ReferenceDate"], format="%d/%m/%Y", errors="coerce"
     )
 
-    Reviews = pd.read_csv("/workspaces/validator-training/fake_cin_data/Reviews.csv")
+    Reviews = pd.read_csv("/workspaces/validator-training-alistair/fake_cin_data/Reviews.csv")
     Section47 = pd.read_csv(
-        "/workspaces/validator-training/fake_cin_data/Section47.csv"
+        "/workspaces/validator-training-alistair/fake_cin_data/Section47.csv"
     )
 
     return (
